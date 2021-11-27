@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+
+		<listener class-name="generic.SearchListener" />
+	</listeners>
+	
+	<test name="Test1">
+		<parameter name="browser" value="chrome" />
+		<parameter name="baseurl" value="https://www.zanui.com.au/" />
+		<classes>
+			<class name="script.ZanuiTest5Script">
+			
+				<methods>
+					<include name="script5" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="script.ZanuiTest5Script" />
+			
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
